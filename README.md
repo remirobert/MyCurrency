@@ -1,0 +1,2 @@
+# MyCurrency
+Currency app test
