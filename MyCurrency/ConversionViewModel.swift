@@ -27,7 +27,7 @@ class ConversionViewModel: NSObject {
         }
     }
     
-    private func updateConversions(from: Currency, value: Double) {
+    func convert(from: Currency, value: Double) {
         self.conversions = Currency.all().map { currency -> Conversion in
             let result = from.convert(to: currency, value: value)
             return Conversion(currency: currency, result: result)
@@ -46,7 +46,7 @@ class ConversionViewModel: NSObject {
                 CurrencyGraph.sharedGraph.addRate(from: model.from, to: model.to, for: model.rate)
             }
             DispatchQueue.main.async {
-                self.updateConversions(from: Currency.EUR, value: 1)
+                self.convert(from: Currency.EUR, value: 1)
             }
         }
     }
