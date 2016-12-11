@@ -12,7 +12,7 @@ struct CurrencyModel {
     
     var to: Currency
     var from: Currency
-    var rate: Double?
+    var rate: Double
     
     init?(json: [String:AnyObject]) {
         guard let to = Currency(rawValue: (json["to"] as? String) ?? ""),

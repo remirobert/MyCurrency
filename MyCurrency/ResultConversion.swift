@@ -9,6 +9,7 @@
 import UIKit
 
 enum ResultConversion {
+
     case value(Double)
     case notFound
 }

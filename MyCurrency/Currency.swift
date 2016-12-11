@@ -9,6 +9,7 @@
 import UIKit
 
 enum Currency: String {
+
     case EUR = "EUR"
     case USD = "USD"
     case JPY = "JPY"

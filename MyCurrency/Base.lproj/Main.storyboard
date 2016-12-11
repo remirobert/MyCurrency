@@ -1,26 +1,107 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lLO-Yc-PZz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MyCurrency-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="MyCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-nF-CBW">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="q7j-z7-Dtb" customClass="ConversionTableViewCell" customModule="MyCurrency" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q7j-z7-Dtb" id="4p0-bh-hJK">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHT-de-zOZ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="55" id="mmq-dz-tE2"/>
+                                                        <constraint firstAttribute="height" constant="30" id="oMe-a8-K4t"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34.7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-c3-sxe">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Ff8-lb-AmY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                                    <color key="textColor" red="0.0" green="0.27468597223888896" blue="0.4094630612472222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.093752555550000005" green="0.43023067710000001" blue="0.67527794839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="JHT-de-zOZ" firstAttribute="leading" secondItem="4p0-bh-hJK" secondAttribute="leadingMargin" id="QOf-x9-0Kr"/>
+                                                <constraint firstItem="lJf-c3-sxe" firstAttribute="centerY" secondItem="4p0-bh-hJK" secondAttribute="centerY" id="UWJ-X2-S5S"/>
+                                                <constraint firstItem="lJf-c3-sxe" firstAttribute="trailing" secondItem="4p0-bh-hJK" secondAttribute="trailingMargin" id="XYw-l3-FqP"/>
+                                                <constraint firstItem="lJf-c3-sxe" firstAttribute="leading" secondItem="JHT-de-zOZ" secondAttribute="trailing" constant="8" id="dmM-OL-62g"/>
+                                                <constraint firstItem="JHT-de-zOZ" firstAttribute="centerY" secondItem="4p0-bh-hJK" secondAttribute="centerY" id="lpz-0s-4Qx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelCurrency" destination="JHT-de-zOZ" id="cF7-7G-Mro"/>
+                                            <outlet property="labelValue" destination="lJf-c3-sxe" id="hxr-hb-UlK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.093752555549144745" green="0.43023067712783813" blue="0.6752779483795166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vQ4-nF-CBW" secondAttribute="bottom" id="3Jb-Cx-htV"/>
+                            <constraint firstItem="vQ4-nF-CBW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6I3-dX-GuV"/>
+                            <constraint firstAttribute="trailing" secondItem="vQ4-nF-CBW" secondAttribute="trailing" id="X1t-ew-wI5"/>
+                            <constraint firstItem="vQ4-nF-CBW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oa4-9U-MhC"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MyCurrency" id="Frs-Io-3hg"/>
+                    <connections>
+                        <outlet property="tableview" destination="vQ4-nF-CBW" id="k3p-NM-rkj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gEu-zS-UHR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lLO-Yc-PZz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="8sO-qd-rdE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.093752555550000005" green="0.43023067710000001" blue="0.67527794839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CVi-DV-qRy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFy-f5-szR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74.400000000000006" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

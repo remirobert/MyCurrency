@@ -23,32 +23,44 @@ class CurrencyGraph {
     func addRate(from: Currency, to: Currency, for rate: Double) {
         let currencyFrom = self.vertex.filter({ $0.currency == from }).first!
         let currencyTo = self.vertex.filter({ $0.currency == to }).first!
-        let edge = RateEdge(from: currencyFrom, to: currencyTo, for: rate)
-        currencyFrom.edges.append(edge)
-    }    
+    
+        if currencyFrom.edges.filter ({ return $0.to.currency == to }).count == 0 {
+            let edge = RateEdge(from: currencyFrom, to: currencyTo, for: rate)
+            currencyFrom.edges.append(edge)
+        }
+        if currencyTo.edges.filter ({ return $0.to.currency == from }).count == 0 {
+            let edge = RateEdge(from: currencyTo, to: currencyFrom, for: 1 / rate)
+            currencyTo.edges.append(edge)
+        }
+    }
 }
 
 extension CurrencyGraph {
     
-    private func getPath(current: CurrencyVertex, to: Currency, path: [RateEdge]) {
+    private func getPath(current: CurrencyVertex,
+                         to: Currency,
+                         visited: [CurrencyVertex] = [],
+                         path: [RateEdge] = []) {
         if current.currency == to {
             self.pathCurrency = path
             return
         }
-        if current.edges.count == 0 {
+        if current.edges.count == 0 || visited.filter({ return $0 == current }).count > 0 {
             return
         }
+        var visitedVertex = visited
+        visitedVertex.append(current)
         for edge in current.edges {
             var currentPath = path
             currentPath.append(edge)
-            getPath(current: edge.to, to: to, path: currentPath)
+            getPath(current: edge.to, to: to, visited: visitedVertex, path: currentPath)
         }
     }
     
     func findPath(from: Currency, to: Currency) -> [RateEdge]? {
         let currencyFrom = self.vertex.filter({ $0.currency == from }).first!
         self.pathCurrency = nil
-        getPath(current: currencyFrom, to: to, path: [])
+        getPath(current: currencyFrom, to: to)
         return self.pathCurrency
     }
 }
