@@ -59,8 +59,6 @@
 		BB0D8F1B1DF86FBA00144164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB0D8F201DF86FBA00144164 /* MyCurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0D8F261DF86FBA00144164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB0D8F2F1DF86FBA00144164 /* MyCurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCurrencyUITests.swift; sourceTree = "<group>"; };
-		BB0D8F311DF86FBA00144164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB0D8F3E1DF870A800144164 /* CurrencyVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyVertex.swift; sourceTree = "<group>"; };
 		BB0D8F401DF870CB00144164 /* RateEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateEdge.swift; sourceTree = "<group>"; };
 		BB0D8F431DF871C700144164 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			children = (
 				BB0D8F0E1DF86FBA00144164 /* MyCurrency */,
 				BB0D8F231DF86FBA00144164 /* MyCurrencyTests */,
-				BB0D8F2E1DF86FBA00144164 /* MyCurrencyUITests */,
 				BB0D8F0D1DF86FBA00144164 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,15 +144,6 @@
 				BBD08F951DFC6C4E00BD0178 /* CurrencyModelTests.swift */,
 			);
 			path = MyCurrencyTests;
-			sourceTree = "<group>";
-		};
-		BB0D8F2E1DF86FBA00144164 /* MyCurrencyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BB0D8F2F1DF86FBA00144164 /* MyCurrencyUITests.swift */,
-				BB0D8F311DF86FBA00144164 /* Info.plist */,
-			);
-			path = MyCurrencyUITests;
 			sourceTree = "<group>";
 		};
 		BB0D8F3D1DF8709400144164 /* DataStructure */ = {
