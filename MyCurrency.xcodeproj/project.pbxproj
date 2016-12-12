@@ -118,18 +118,13 @@
 		BB0D8F0E1DF86FBA00144164 /* MyCurrency */ = {
 			isa = PBXGroup;
 			children = (
+				BBB646EE1DFE991600724523 /* Views */,
+				BBB646ED1DFE98FD00724523 /* ViewController */,
+				BBB646EC1DFE98C700724523 /* Storyboards */,
 				BB15BAAD1DFB60580094ADBA /* Network */,
 				BB0D8F421DF871B800144164 /* Model */,
 				BB0D8F3D1DF8709400144164 /* DataStructure */,
-				BB0D8F0F1DF86FBA00144164 /* AppDelegate.swift */,
-				BBB646D91DFD557300724523 /* ConversionTableViewCell.swift */,
-				BBB646DB1DFD579100724523 /* ConversionViewProtocol.swift */,
-				BBB646D31DFC6FD100724523 /* ConversionViewController.swift */,
-				BBB646D51DFC737800724523 /* ConversionViewModel.swift */,
-				BB0D8F131DF86FBA00144164 /* Main.storyboard */,
-				BB0D8F161DF86FBA00144164 /* Assets.xcassets */,
-				BB0D8F181DF86FBA00144164 /* LaunchScreen.storyboard */,
-				BB0D8F1B1DF86FBA00144164 /* Info.plist */,
+				BBB646EB1DFE98B800724523 /* App */,
 			);
 			path = MyCurrency;
 			sourceTree = "<group>";
@@ -175,6 +170,43 @@
 				BBD08F8A1DFC41CE00BD0178 /* Ressource.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		BBB646EB1DFE98B800724523 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D8F1B1DF86FBA00144164 /* Info.plist */,
+				BB0D8F161DF86FBA00144164 /* Assets.xcassets */,
+				BB0D8F0F1DF86FBA00144164 /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		BBB646EC1DFE98C700724523 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D8F131DF86FBA00144164 /* Main.storyboard */,
+				BB0D8F181DF86FBA00144164 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BBB646ED1DFE98FD00724523 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BBB646D51DFC737800724523 /* ConversionViewModel.swift */,
+				BBB646D31DFC6FD100724523 /* ConversionViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		BBB646EE1DFE991600724523 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBB646D91DFD557300724523 /* ConversionTableViewCell.swift */,
+				BBB646DB1DFD579100724523 /* ConversionViewProtocol.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
